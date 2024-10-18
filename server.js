@@ -2,6 +2,11 @@ const express = require('express');
 const ai = require('./index'); // Ensure this is the correct path to your module
 const app = express();
 
+const cors = require('cors');
+// Allow all CORS requests
+app.use(cors());
+
+
 const models = [
   'gpt-4o-mini-free',
   'gpt-4o-mini',
